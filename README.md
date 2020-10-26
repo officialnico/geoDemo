@@ -6,8 +6,6 @@ Speed is of essence when making these calculation.
 
 we'll be using Binance for this example
 
-Most exchanges also use AWS so it's a fair bet in flexibility using this method.
-
 #### First we ping the exchange in question to find the IP
 ![](https://i.ibb.co/3snmNx8/Screen-Shot-2020-10-26-at-1-19-41-PM.png)
 
