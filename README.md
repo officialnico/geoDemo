@@ -23,3 +23,7 @@ Instance states can be switched on and off automatically in order to save resour
 as you can see it's the same one as that of the exchange's API
 ![](https://i.ibb.co/9HG4y93/Screen-Shot-2020-10-26-at-2-10-48-PM.png)
 
+#### And finally the result!
+![](https://i.ibb.co/zFDGFbJ/Screen-Shot-2020-10-26-at-6-32-39-PM.png)
+
+#### Feel free to test out the difference in time on your own machines I've included everything you need in this repo
