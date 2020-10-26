@@ -1,9 +1,11 @@
 # Placing our bot on the same AWS data center as the exchange
 
-You're coming so close to the exchange server that it is practically a LAN connection, therefor having a cutting edge advantage over every other trading bot. Speed is of essence when making these calculation.
-Most exchanges also use AWS so it's a fair bet in flexibility using this method.
+You're coming so close to the exchange server that it is practically a LAN connection
+this is a cutting edge advantage over every other trading bot.
+Speed is of essence when making these calculation.
 
 we'll be using Binance for this example
+Most exchanges also use AWS so it's a fair bet in flexibility using this method.
 
 #### First we ping the exchange in question to find the IP
 ![](https://i.ibb.co/3snmNx8/Screen-Shot-2020-10-26-at-1-19-41-PM.png)
