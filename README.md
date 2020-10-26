@@ -1,5 +1,5 @@
 The idea here is to place our trading scripts on the same AWS platform as the exchange
-Since AWS also uses their own DNS you're coming to so close to the exchange server that it is practically a LAN connection
+Since AWS also uses their own DNS you're coming so close to the exchange server that it is practically a LAN connection
 Most exchanges also use AWS so it's a fair bet in flexibility using this method.
 
 we'll be using Binance for this example
