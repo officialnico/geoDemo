@@ -5,6 +5,7 @@ this is a cutting edge advantage over every other trading bot.
 Speed is of essence when making these calculation.
 
 we'll be using Binance for this example
+
 Most exchanges also use AWS so it's a fair bet in flexibility using this method.
 
 #### First we ping the exchange in question to find the IP
