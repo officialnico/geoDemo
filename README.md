@@ -1,7 +1,6 @@
 # Placing our bot on the same AWS data center as the exchange
 
-The idea here is to place our trading scripts on the same AWS platform as the exchange
-Since AWS also uses their own DNS you're coming so close to the exchange server that it is practically a LAN connection, therefor having a cutting edge advantage over every other trading bot. Speed is of essence when making these calculation.
+You're coming so close to the exchange server that it is practically a LAN connection, therefor having a cutting edge advantage over every other trading bot. Speed is of essence when making these calculation.
 Most exchanges also use AWS so it's a fair bet in flexibility using this method.
 
 we'll be using Binance for this example
