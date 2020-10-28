@@ -30,8 +30,8 @@ def get_all_ips():
         ip = get_ip(exchange)
         if(not ip): continue
         isp = get_country(ip)
-        print(exchange,ip, isp)
-        ips[str(exchange)]=[str(ip),str(isp)]
+        ips[str(exchange)]=[str(ip),str(isp),get_volume(exchange)]
+        print(ex,ips[str(exchange)])
         time.sleep(0.1)
 
     if(input('save y/n?')=='y'):
@@ -45,5 +45,20 @@ def get_country(ip):
     ip_dict = IPWhois(ip).lookup_rdap()
     return ip_dict['entities'][0]
 
+def get_volume(exchange):
+    ret = None
+    try:
+        ret = exchange.fetchOHLCV("BTC/USDT", timeframe='1d',limit=1)[0][5]
+    except:
+        pass
+    if(not ret):
+        try:
+            ret = exchange.fetchOHLCV("BTC/USD", timeframe='1d',limit=1)[0][5]
+        except: 
+            pass
+    return ret
 
 get_all_ips()
+
+# b=ccxt.binance()
+# print(get_volume(b))
