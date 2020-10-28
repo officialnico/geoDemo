@@ -44,7 +44,9 @@ def sf_speed_test():
 	percentage = int((speed_here-speed_sf)/(speed_sf)*100)
 	print("request time difference:", percentage,'%')
 
-	if(percentage<60 and input('rerun? y/n')):
+	if(percentage<60 and input('rerun? y/n')=='y'):
+		sf_speed_test()
+		time.sleep(1)
 		sf_speed_test()
 
 if __name__=="__main__":
