@@ -1,0 +1,2 @@
+apiKey='JIgMetKmXC4ce9fnzbCznNfML7KN5SXccnxFi69JP7CnCKHUAQAOpOo4M8etyIBL'
+secret='ieD0IvEtAzhHYA6ncgCce5Wog6RSFaNt8KqrLWuMGux8rClaPMsua5ELVACRjHWj'
