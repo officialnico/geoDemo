@@ -1,13 +1,17 @@
 import ccxt
 import time
 import os
+import config
 
 #Checking key permission
 if(os.access('tokyo_test.pem', os.W_OK)):
     os.system("chmod 400 tokyo_test.pem")
+if(os.access('sf_key.pem', os.W_OK)):
+     os.system("chmod 400 sf_key.pem")
 
 #Code on Tokyo server
-binance = ccxt.binance({'apiKey':'JIgMetKmXC4ce9fnzbCznNfML7KN5SXccnxFi69JP7CnCKHUAQAOpOo4M8etyIBL','secret':'ieD0IvEtAzhHYA6ncgCce5Wog6RSFaNt8KqrLWuMGux8rClaPMsua5ELVACRjHWj'})
+#This is a testing binance account
+binance = ccxt.binance({'apiKey':config.apiKey,'secret':config.secret})
 t1 = time.time()
 balance = binance.fetchBalance()
 speed_here = time.time()-t1
@@ -15,7 +19,24 @@ speed_here = time.time()-t1
 cmd = """ssh -i 'tokyo_test.pem' ec2-user@ec2-3-112-93-225.ap-northeast-1.compute.amazonaws.com python3.8 speed_test.py"""
 speed_tokyo = float(os.popen(cmd).read())
 
-print("""request type: fetchBalance""")
+print("--AWS--")
+print("Exchange: Binance\nAPI Location: AWS Tokyo")
+print("""request type: fetchBalance (Private API)""")
 print("current location:", speed_here)
-print("server at AWS location of exchange:", speed_tokyo)
+print("server at AWS location of exchange (Tokyo):", speed_tokyo)
 print("request time difference:", int((speed_here-speed_tokyo)/(speed_tokyo)*100),'%')
+
+kraken = ccxt.kraken()
+t1 = time.time()
+book = kraken.fetchTicker("BTC/USDT")
+speed_here = time.time()-t1
+
+cmd = """ssh -i 'sf_key.pem' ec2-user@ec2-52-53-242-202.us-west-1.compute.amazonaws.com python3.8 speed_test.py"""
+speed_sf = float(os.popen(cmd).read())
+print("\n--CloudFlare--")
+print("Exchange: Kraken\nAPI Location: CloudFlare SF")
+print("""request type: fetchTicker (Public API)""")
+print("current location:", speed_here)
+print("server at AWS location of exchange (SF):", speed_sf)
+print("request time difference:", int((speed_here-speed_sf)/(speed_sf)*100),'%')
+
