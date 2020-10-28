@@ -2,6 +2,10 @@ import ccxt
 import time
 import os
 
+#Checking key permission
+if(os.access('tokyo_test.pem', os.W_OK)):
+    os.system("chmod 400 tokyo_test.pem")
+
 #Code on Tokyo server
 binance = ccxt.binance({'apiKey':'JIgMetKmXC4ce9fnzbCznNfML7KN5SXccnxFi69JP7CnCKHUAQAOpOo4M8etyIBL','secret':'ieD0IvEtAzhHYA6ncgCce5Wog6RSFaNt8KqrLWuMGux8rClaPMsua5ELVACRjHWj'})
 t1 = time.time()
