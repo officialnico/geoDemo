@@ -37,4 +37,4 @@ Let's place our bot on the AWS N.California location and take a look at where we
 ![](https://i.ibb.co/qWgTdh2/Screen-Shot-2020-10-28-at-2-25-47-PM.png)
 
 #### Optimization Result
-
+![](https://i.ibb.co/mvFGZtq/Screen-Shot-2020-10-28-at-2-52-21-PM.png)
